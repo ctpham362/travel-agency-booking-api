@@ -23,10 +23,10 @@ public class Country {
     private String country;
 
     @Column(name="create_date")
-    private LocalDateTime createDate;
+    private LocalDateTime create_date;
 
     @Column(name="last_update")
-    private LocalDateTime lastUpdate;
+    private LocalDateTime last_update;
 
     @OneToMany(mappedBy="country",cascade=CascadeType.ALL)
     private Set<Division> divisions;

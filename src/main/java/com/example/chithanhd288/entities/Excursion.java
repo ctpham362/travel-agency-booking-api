@@ -20,24 +20,24 @@ public class Excursion {
     private Long id;
 
     @Column(name = "excursion_price")
-    private BigDecimal excursionPrice;
+    private BigDecimal excursion_price;
 
     @Column(name = "excursion_title")
-    private String excursionTitle;
+    private String excursion_title;
 
     @Column(name = "image_url")
-    private String imageUrl;
+    private String image_URL;
 
     @Column(name = "create_date")
-    private LocalDateTime createDate;
+    private LocalDateTime create_date;
 
     @Column(name = "last_update")
-    private LocalDateTime lastUpdate;
+    private LocalDateTime last_update;
 
     @ManyToOne
     @JoinColumn(name = "vacation_id")
     private Vacation vacation;
 
     @ManyToMany(mappedBy = "excursions")
-    private Set<CartItem> cartItems;
+    private Set<CartItem> cart_items;
 }

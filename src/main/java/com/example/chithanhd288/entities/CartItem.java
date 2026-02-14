@@ -19,10 +19,10 @@ public class CartItem {
     private Long id;
 
     @Column(name = "create_date")
-    private LocalDateTime createDate;
+    private LocalDateTime create_date;
 
     @Column(name = "last_update")
-    private LocalDateTime updateDate;
+    private LocalDateTime update_date;
 
     @ManyToOne
     @JoinColumn(name = "cart_id")

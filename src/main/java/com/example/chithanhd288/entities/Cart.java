@@ -20,28 +20,28 @@ public class Cart {
     private Long id;
 
     @Column(name = "package_price")
-    private BigDecimal packagePrice;
+    private BigDecimal package_price;
 
     @Column(name = "party_size")
-    private BigDecimal partySize;
+    private BigDecimal party_size;
 
     @Enumerated(EnumType.STRING)
     @Column(name = "status")
     private StatusType status;
 
     @Column(name = "order_tracking_number")
-    private String orderTrackingNumber;
+    private String order_tracking_number;
 
     @Column(name = "create_date")
-    private LocalDateTime createDate;
+    private LocalDateTime create_date;
 
     @Column(name = "last_update")
-    private LocalDateTime lastUpdate;
+    private LocalDateTime last_update;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
     @OneToMany(mappedBy = "cart", cascade = CascadeType.ALL)
-    private Set<CartItem> cartItems;
+    private Set<CartItem> cart_items;
 }

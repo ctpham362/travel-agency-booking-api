@@ -27,11 +27,11 @@ public class Customer {
 
     @NotBlank
     @Column(name = "customer_first_name")
-    private String firstName;
+    private String first_name;
 
     @NotBlank
     @Column(name = "customer_last_name")
-    private String lastName;
+    private String last_name;
 
     @Column(name = "address")
     private String address;
@@ -40,15 +40,15 @@ public class Customer {
     private String phone;
 
     @Column(name = "postal_code")
-    private String postalCode;
+    private String postal_code;
 
     @CreationTimestamp
     @Column(name = "create_date")
-    private LocalDateTime createDate;
+    private LocalDateTime create_date;
 
     @UpdateTimestamp
     @Column(name = "last_update")
-    private LocalDateTime lastUpdate;
+    private LocalDateTime last_update;
 
     @ManyToOne
     @JoinColumn(name = "division_id")

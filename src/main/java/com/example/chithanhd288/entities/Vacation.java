@@ -22,22 +22,22 @@ public class Vacation {
     private Long id;
 
     @Column(name = "vacation_title")
-    private String vacationTitle;
+    private String vacation_title;
 
     @Column(name = "description")
     private String description;
 
     @Column(name = "image_url")
-    private String imageUrl;
+    private String image_URL;
 
     @Column(name = "create_date")
-    private LocalDateTime createDate;
+    private LocalDateTime create_date;
 
     @Column(name = "last_update")
-    private LocalDateTime lastUpdate;
+    private LocalDateTime last_update;
 
     @Column(name = "travel_fare_price")
-    private BigDecimal travelFarePrice;
+    private BigDecimal travel_fare_price;
 
     @OneToMany(mappedBy = "vacation")
     private Set<Excursion> excursions;

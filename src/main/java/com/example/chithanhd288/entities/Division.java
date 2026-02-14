@@ -22,10 +22,10 @@ public class Division {
     private String division;
 
     @Column(name = "create_date")
-    private LocalDateTime createDate;
+    private LocalDateTime create_date;
 
     @Column(name = "last_update")
-    private LocalDateTime lastUpdate;
+    private LocalDateTime last_update;
 
     @ManyToOne
     @JoinColumn(name = "country_id")
