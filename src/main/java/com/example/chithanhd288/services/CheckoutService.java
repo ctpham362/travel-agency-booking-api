@@ -1,4 +1,5 @@
 package com.example.chithanhd288.services;
 
-public class CheckoutService {
+public interface CheckoutService {
+    PurchaseResponse placeOrder(Purchase purchase);
 }

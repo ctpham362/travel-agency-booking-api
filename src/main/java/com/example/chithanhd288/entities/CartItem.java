@@ -22,7 +22,7 @@ public class CartItem {
     private LocalDateTime create_date;
 
     @Column(name = "last_update")
-    private LocalDateTime update_date;
+    private LocalDateTime last_update;
 
     @ManyToOne
     @JoinColumn(name = "cart_id")
