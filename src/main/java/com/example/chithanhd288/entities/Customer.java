@@ -25,20 +25,23 @@ public class Customer {
     @Column(name = "customer_id")
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "Required")
     @Column(name = "customer_first_name")
     private String first_name;
 
-    @NotBlank
+    @NotBlank(message = "Required")
     @Column(name = "customer_last_name")
     private String last_name;
 
+    @NotBlank(message = "Required")
     @Column(name = "address")
     private String address;
 
+    @NotBlank(message = "Required")
     @Column(name = "phone")
     private String phone;
 
+    @NotBlank(message = "Required")
     @Column(name = "postal_code")
     private String postal_code;
 
@@ -50,6 +53,7 @@ public class Customer {
     @Column(name = "last_update")
     private LocalDateTime last_update;
 
+    @NotBlank(message = "Required")
     @ManyToOne
     @JoinColumn(name = "division_id")
     private Division division;
