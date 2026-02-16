@@ -19,7 +19,7 @@ public class SampleData {
 
             System.out.println("Loading Data");
 
-            if (customerRepository.count() > 4) {
+            if (customerRepository.count() > 1) {
                 System.out.println("Sample already loaded");
                 return;
             }

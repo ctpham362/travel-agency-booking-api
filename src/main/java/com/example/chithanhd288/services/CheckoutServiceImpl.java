@@ -37,6 +37,8 @@ public class CheckoutServiceImpl implements CheckoutService {
         Set<CartItem> cartItems = purchase.getCartItems();
 
         String trackingNumber = generateTrackingNumber();
+
+        cart.setOrderTrackingNumber(trackingNumber);
         cart.setStatus(StatusType.ordered);
 
         LocalDateTime now = LocalDateTime.now();
