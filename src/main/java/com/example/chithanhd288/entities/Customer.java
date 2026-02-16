@@ -1,17 +1,12 @@
 package com.example.chithanhd288.entities;
 
 import jakarta.persistence.*;
-import jakarta.persistence.criteria.Order;
-import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
-import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
-import java.security.PrivateKey;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Set;
 
 @Entity
@@ -22,27 +17,22 @@ import java.util.Set;
 public class Customer {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    @Column(name = "customer_id")
+    @Column(name = "customer_id", nullable = false)
     private Long id;
 
-    @NotBlank(message = "Required")
-    @Column(name = "customer_first_name")
-    private String first_name;
+    @Column(name = "customer_first_name", nullable = false)
+    private String firstName;
 
-    @NotBlank(message = "Required")
-    @Column(name = "customer_last_name")
-    private String last_name;
+    @Column(name = "customer_last_name", nullable = false)
+    private String lastName;
 
-    @NotBlank(message = "Required")
-    @Column(name = "address")
+    @Column(name = "address", nullable = false)
     private String address;
 
-    @NotBlank(message = "Required")
-    @Column(name = "phone")
+    @Column(name = "phone", nullable = false)
     private String phone;
 
-    @NotBlank(message = "Required")
-    @Column(name = "postal_code")
+    @Column(name = "postal_code", nullable = false)
     private String postal_code;
 
     @CreationTimestamp
@@ -53,8 +43,7 @@ public class Customer {
     @Column(name = "last_update")
     private LocalDateTime last_update;
 
-    @NotBlank(message = "Required")
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "division_id")
     private Division division;
 

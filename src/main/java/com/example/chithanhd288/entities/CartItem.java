@@ -3,6 +3,8 @@ package com.example.chithanhd288.entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDateTime;
 import java.util.Set;
@@ -18,9 +20,11 @@ public class CartItem {
     @Column(name = "cart_item_id")
     private Long id;
 
+    @CreationTimestamp
     @Column(name = "create_date")
     private LocalDateTime create_date;
 
+    @UpdateTimestamp
     @Column(name = "last_update")
     private LocalDateTime last_update;
 

@@ -12,7 +12,7 @@ import java.util.UUID;
 
 @Service
 
-public class CheckoutServiceImp implements CheckoutService {
+public class CheckoutServiceImpl implements CheckoutService {
     private CartItemRepository cartItemRepository;
     private CartRepository cartRepository;
     private CustomerRepository customerRepository;
@@ -20,7 +20,7 @@ public class CheckoutServiceImp implements CheckoutService {
     private VacationRepository vacationRepository;
 
     @Autowired
-    public CheckoutServiceImp(CartItemRepository cartItemRepository, CartRepository cartRepository, CustomerRepository customerRepository, ExcursionRepository excursionRepository, VacationRepository vacationRepository) {
+    public CheckoutServiceImpl(CartItemRepository cartItemRepository, CartRepository cartRepository, CustomerRepository customerRepository, ExcursionRepository excursionRepository, VacationRepository vacationRepository) {
         this.cartItemRepository = cartItemRepository;
         this.cartRepository = cartRepository;
         this.customerRepository = customerRepository;
@@ -51,7 +51,7 @@ public class CheckoutServiceImp implements CheckoutService {
             item.setCreate_date(now);
             item.setLast_update(now);
         }
-        cart.setCart_items(cartItems);
+        cart.setCartItems(cartItems);
 
         if (customer.getId() == null) {
             customer.setCreate_date(now);
